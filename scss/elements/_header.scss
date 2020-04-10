@@ -1,0 +1,179 @@
+#wpadminbar {
+	
+	@include media($mobile){
+		position: fixed;
+	}
+}
+
+#global_header {
+	background: url('../images/header-bg.png') no-repeat;
+	background-size: cover;
+	background-position: center center;
+	display: block;
+	
+	@include media($mobile){
+		display: none;
+	}
+	
+	#logo {
+		@include span-columns(12);
+		margin-right: 0;
+		padding: 30px 0 20px;
+		text-align: center;
+		
+		a {
+			text-indent: 9999em;
+		
+			img {
+				width: 100%;
+				max-width: 315px;
+			}
+		
+		}
+	}
+}
+
+#fixed_header {
+	background-color: $black;
+	position: fixed;
+	width: 100%;
+	z-index: 11;
+	top: -100px;
+	padding: 10px 0px;
+	max-width: 1600px;
+	
+	&.slideLeft {
+		-webkit-transition: 1s;
+	    -moz-transform: 1s;
+	    -ms-transition: 1s;
+	    transition: 1s;
+	    right: 235px;
+	}
+	
+	&.menuClose {
+	    -webkit-transition: 1s;
+	    -moz-transform: 1s;
+	    -ms-transition: 1s;
+	    transition: 1s;
+	    right: 0px;
+    }
+	
+	#fixed_logo {
+		@include span-columns(1);
+		margin-right: 0;
+	}
+	
+	.mobile_btn {
+		display: none;
+		float: right;
+		padding-top: 4px;
+		
+		@include media($mobile){
+			display: block;
+		}
+		
+		i {
+			color: $white;
+			font-size: 40px;
+			font-weight: 100;
+		}
+	}
+	
+	nav {
+		@include span-columns(11);
+		margin-top: 5px;
+		
+		@include media($mobile){
+			display: none;
+		}
+		
+		ul {
+			list-style: none;
+			text-align: center;
+			
+			li {
+				display: inline-block;
+				padding: 5px 15px;
+				
+				a {
+					@include psCond;
+					color: $white;
+					font-size: 14px;
+					display: inline-block;
+					text-transform: uppercase;
+					letter-spacing: 1px;
+					
+					&:hover {
+						color: $red;
+					}
+				}
+			}
+		}
+	}
+}
+
+.nav_container {
+	background-color: $black;
+	
+	@include media($mobile){
+		padding: 15px 0px;
+	}
+	
+	.mobile_logo {
+		display: none;
+		
+		@include media($mobile){
+			@include span-columns(2);
+			display: block;
+		}
+	}
+	
+	.mobile_btn {
+		display: none;
+		float: right;
+		padding-top: 4px;
+		
+		@include media($mobile){
+			display: block;
+		}
+		
+		i {
+			color: $white;
+			font-size: 40px;
+			font-weight: 100;
+		}
+	}
+	
+	nav {
+		display: block;
+		
+		@include media($mobile){
+			display: none;
+		}
+	}
+	
+	ul {
+		@include span-columns(12);
+		list-style: none;
+		text-align: center;
+
+		li {
+			display: inline-block;
+			padding: 5px 15px;
+
+			a {
+				@include psCond;
+				font-size: 14px;
+				text-transform: uppercase;
+				display: inline-block;
+				color: $white;
+				padding: 3px;
+				letter-spacing: 1px;
+				
+				&:hover {
+					color: $red;
+				}
+			}
+		}
+	}
+}

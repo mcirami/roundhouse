@@ -1,0 +1,161 @@
+#global_footer {
+	@include span-columns(12);
+	background-color: $black;
+	padding: 60px 0;
+	
+	.container {
+		@include display(flex);
+		@include align-items(center);
+	}
+	
+	nav {
+		@include span-columns(4);
+		
+		@include media($mobile){
+			width: 100%;
+			margin-top: 28%;
+			margin-bottom: 50px;
+		}
+		
+		ul {
+			list-style: none;
+			
+			li {
+				@include media($mobile){
+					padding: 20px 40px;
+					border-top: 1px solid white;
+					
+					&:last-child {
+						border-bottom: 1px solid white;
+					}
+				}
+				
+				a {
+					color: $white;
+					@include psCond;
+					font-size: 14px;
+					text-transform: uppercase;
+					
+					@include media($mobile){
+						font-size: 20px;
+					}
+					
+					&:hover {
+						color: $red;
+					}
+				}
+			}
+		}
+	}
+	
+	.logo {
+		@include span-columns(4);
+		text-align: center;
+		
+		@include media($mobile){
+			width: 100%;
+			padding: 40px;
+			position: absolute;
+			top: -68px;
+		}
+		
+		img {
+			width: 100%;
+			height: auto;
+		}
+		
+	}
+	
+	.social {
+		@include span-columns(4);
+		text-align: right;
+		
+		@include media($mobile){
+			width: 100%;
+			text-align: center;
+		}
+		
+		ul {
+			list-style: none;
+			
+			li {
+				display: inline-block;
+				width: 32px;
+				height: 32px;
+				margin: 0 0 0 15px;
+				vertical-align: top;
+				
+				@include media($tablet){
+					width: 40px;
+					height: 40px;
+				}
+				
+				@include media($mobile){
+					margin-right: 35px;
+					width: 45px;
+					height: 45px;
+				}
+				
+				&:last-child {
+				
+					@include media($mobile){
+						margin-right: 0;
+					}
+				}
+				
+				a {
+					display: block;
+					width: 100%;
+					height: 100%;
+				
+					img {
+						width: 100%;
+					}
+				}
+				
+				.twitter {
+					margin-top: 4px;
+				}
+			}
+		}
+	}
+}
+
+.footer_copy {
+	@include span-columns(12);
+	text-align: center;
+	padding: 5px 0;
+	background: $tan;
+	text-transform: uppercase;
+	margin-top: 5px;
+	
+	@include media($mobile){
+		background: $blue;
+		padding: 30px 80px;
+	}
+	
+	p {
+		@include psMed;
+		font-size: 18px;
+	
+		a {
+			margin-right: 3px;
+			color: $black;
+			
+			@include media($mobile){
+				@include span-columns(4);
+			}
+		}
+		
+		span {
+			margin-left: 3px;
+		}
+		
+		.line {
+		
+			@include media($mobile){
+				display: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,142 @@
+* {
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	overflow-x: hidden;
+	font-size: 62.5%;
+	background-color: #f2f2f2;
+}
+
+body {
+	font-size: 1.6rem;
+	line-height: 2.4rem;
+	color: $charcoal;
+	max-width: 1600px;
+	margin: 0 auto;
+	overflow: hidden;
+	right: 0px;
+	background-color: $white;
+	
+	&.slideLeft {
+		-webkit-transition: 1s;
+	    -moz-transform: 1s;
+	    -ms-transition: 1s;
+	    transition: 1s;
+	    right: 235px;
+	}
+	
+	&.menuClose {
+	    -webkit-transition: 1s;
+	    -moz-transform: 1s;
+	    -ms-transition: 1s;
+	    transition: 1s;
+	    right: 0px;
+    }
+}
+
+a {
+	text-decoration: none;
+	color: $orange;
+
+	&:hover {
+		color: darken($orange, 5%);
+	}
+}
+
+::selection {
+	background: lighten($orange, 5%);
+	opacity: 0.8;
+	color: $white;
+	text-shadow: 0 0 1px $charcoal;
+}
+
+::moz-selection {
+	background: lighten($orange, 5%);
+	opacity: 0.8;
+	color: $white;
+	text-shadow: 0 0 1px $charcoal;
+}
+
+.oldies {
+	background: lighten($charcoal, 20%);
+	color: $white;
+	text-align: center;
+	padding: 1rem 0;
+}
+
+// Begin responsive video Wrapper
+.video_container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+
+.video_container iframe,  
+.video_container object,  
+.video_container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+// End responsive video wrapper
+
+.red_link {
+	color: $red;
+	@include psReg;
+	text-transform: uppercase;
+}
+
+.down_arrow {
+	-ms-transform: rotate(90deg); /* IE 9 */
+	-webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+	transform: rotate(90deg);
+	padding: 0 25px;
+}
+
+.page_header {
+	min-height: 130px;
+	background-color: $tan;
+	border-bottom: 4px solid $white;
+}
+
+.tab {
+	@include psReg;
+	padding: 12px 20px 0px 20px;
+	position: absolute;
+	z-index: 2;
+	top: -36px;
+	margin: 0;
+	background-color: $lightGray;
+	left: -20px;
+	
+	@include media($mobile){
+		left: 0px;
+		width: 100%;
+		position: relative;
+	}
+	
+	&.white {
+		background-color: $white;
+	}
+	
+	h2 {
+		@include psReg;
+		font-size: 17px;
+		margin: 0px;
+		display: inline-block;
+		
+		@include media($mobile){
+			font-size: 24px;
+			line-height: 1.4;
+			text-align: center;
+			display: block;
+		}
+	}
+}

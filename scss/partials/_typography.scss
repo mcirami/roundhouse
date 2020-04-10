@@ -1,0 +1,21 @@
+// typography baselines and @font face setups
+
+h1 {
+	@include merri;
+	font-size: 30px;	
+}
+
+h2 {
+	@include psMed;
+	font-size: 37px;
+}
+
+h3 {
+	@include psMed;
+	font-size: 17px;
+}
+
+p {
+	@include psReg;
+	font-size: 13px;
+}

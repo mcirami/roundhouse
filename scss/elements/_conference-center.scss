@@ -1,0 +1,272 @@
+.conference_center {
+	text-align: center;
+	text-transform: uppercase;
+	
+	h1 {
+		@include psMed;
+	}
+	
+	a {
+		@include psReg;
+	}
+	
+	.swiper-wrapper {
+		
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+	
+	.swiper-pagination {
+		bottom: 20px !important;
+		
+		.swiper-pagination-bullet {
+			width: 15px;
+			height: 15px;
+			border: 1px solid $white;
+			opacity: 1;
+			background: none;
+		}
+		
+		.swiper-pagination-bullet-active {
+			background: $white;
+		}
+	}
+	
+	.swiper-button-next {
+		background-image: url('../images/next-btn.png');
+		right: 20px;
+	}
+	
+	.swiper-button-prev {
+		background-image: url('../images/prev-btn.png');
+		left: 20px;
+	}
+	
+	.top_section {
+		@include span-columns(12);
+		text-align: center;
+		background: $tan;
+		padding: 20px 0;
+		
+		h3 {
+			@include merri;
+			text-transform: none;
+			font-size: 20px;
+			margin: 0 auto 10px;
+			padding: 0 30%;
+			font-weight: normal;
+			line-height: 1.4;
+			
+			@include media($mobile){
+				padding: 0 10%;
+				font-size: 30px;
+				margin-bottom: 25px;
+				margin-top: 20px;
+			}
+		}
+		
+		p {
+			@include psReg;
+			padding: 0 15%;
+			text-transform: none;
+			
+			@include media($mobile){
+				padding: 0 10%;
+				font-size: 24px;
+				line-height: 1.6;
+			}
+		}
+	}
+	
+	.middle_section {
+		display: inline-block;
+		
+		.callout_container {
+			@include span-columns(12);
+			
+			.column {
+				padding-top: 60px;
+				float: left;
+				width: 50%;
+				
+				@include media($mobile){
+					width: 100%;
+				}
+				
+				&:first-child {
+					border-right: 1px solid $white;
+				}
+				
+				h1 {
+					margin-bottom: 5px;
+					font-size: 26px;
+					
+					@include media($mobile){
+						font-size: 38px;
+						line-height: 1.2;
+						margin-bottom: 15px;
+					}
+				}
+				
+				img {
+					width: 100%;
+					height: auto;
+					
+					@include media($mobile){
+						margin-top: 20px;
+					}
+				}
+				
+				a {
+					position: absolute;
+					right: 75px;
+					bottom: 25px;
+					font-size: 14px;
+					color: $white;
+					
+					&:after {
+						content:'';
+						background-image: url('../images/white_arrow.png');
+						background-repeat: no-repeat;
+						background-size: 80%;
+						width: 14px;
+						height: 12px;
+						position: absolute;
+						top: 7px;
+						right: -35px;
+						
+						@include media($mobile){
+							content:'';
+							background-image: url('../images/red_arrow.png');
+							background-size: 80%;
+							background-repeat: no-repeat;
+							width: 22px;
+							height: 22px;
+							position: absolute;
+							top: 5px;
+						}
+					}
+					
+					@include media($mobile){
+						display: inline-block;
+						position: relative;
+						font-size: 22px;
+						color: $red;
+						margin-top: 20px;
+						right: 20px;
+						bottom: 0;
+					}
+				}
+				
+				p {
+					@include psCond;
+					display: inline-block;
+					color: $gray;
+					margin-bottom: 15px;
+					
+					@include media($mobile){
+						@include psReg;
+						display: block;
+						font-size: 20px;
+						padding: 0;
+						margin-bottom: 5px;
+					}
+				}
+				
+				span {
+					color: $gray;
+					
+					@include media($mobile){
+						display: none;
+					}
+				}
+			}
+		}
+		
+		> h1 {
+			margin-top: 65px;
+			z-index: 2;
+			
+			@include media($mobile){
+				font-size: 50px;
+				margin-top: 90px;
+			}
+		}
+		
+		.link_wrap {
+			@include span-columns(12);
+			margin-top: -22px;
+			
+			.arrow_link {
+				background: $white;
+				width: 100px;
+				height: 95px;
+				z-index: 1;
+				border-radius: 90px;
+				margin: -32px auto;
+
+				
+				a {
+					display: block;
+					width: 100%;
+					height: 100%;
+					
+					img {
+						position: absolute;
+						bottom: 16px;
+						text-align: center;
+						right: 18px;
+					}
+				}
+			}
+		}
+	}
+	
+	.button_wrap {
+		display: inline-block;
+		width: 100%;
+		margin-top: 40px;
+		
+		@include media($mobile){
+			margin-top: 80px;
+		}
+		
+		.menu_link {
+			padding: 12px 26px;
+			font-size: 14px;
+			border: 1px solid $black;
+			border-radius: 18px;
+			color: $black;
+			
+			@include media($mobile){
+				padding: 20px 34px;
+				font-size: 24px;
+			}
+		}
+	}
+	
+	.bottom_section {
+		padding: 90px 0 60px;
+		background: $tan;
+		
+		@include media($mobile){
+			padding: 120px 0 90px;
+		}
+		
+		a {
+			padding: 14px 30px;
+			border-radius: 18px;
+			color: $white;
+			background: $red;
+			font-size: 14px;
+			
+			@include media($mobile){
+				padding: 22px 40px;
+				font-size: 24px;
+			}
+		}
+	}
+}

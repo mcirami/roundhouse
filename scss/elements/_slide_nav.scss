@@ -1,0 +1,54 @@
+.slide_nav {
+	list-style: none;
+	display: none;
+	background-color: $black;
+	width: 235px;
+    height: 130%;
+    position: fixed;
+    top: 0;
+    right: -235px;
+    bottom: 0;
+    z-index: 99999;
+    background-size: 100% 100%;
+    overflow-y: scroll;
+    
+    &.slideLeft {
+	    -webkit-transition: 1s;
+	    -moz-transform: 1s;
+	    -ms-transition: 1s;
+	    transition: 1s;
+	    right: 0px;
+    }
+    
+    &.menuClose {
+	    -webkit-transition: 1s;
+	    -moz-transform: 1s;
+	    -ms-transition: 1s;
+	    transition: 1s;
+	    right: -235px;
+    }
+    
+    @include media($mobile){
+    	display: block;
+    }
+    
+    ul {
+	    @include clearfix;
+	    list-style: none;
+	    
+	    li {
+		    width: 100%;
+		    border-bottom: 1px solid $white;
+		    
+		    a {
+			    text-transform: uppercase;
+			    color: $white;
+			    display: block;
+			    width: 100%;
+				background-color: $black;
+				color: $white;
+				padding: 20px;
+		    }
+	    }
+    }
+}
